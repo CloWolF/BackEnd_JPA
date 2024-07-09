@@ -61,6 +61,6 @@ public class CustomerControllerImpl implements CustomerController {
 	@GetMapping(value = "/test", produces = "application/json")
 	@Override
 	public String test() {
-		return "Test done Weeee2";
+		return "Test done Weee 3";
 	}
 }
