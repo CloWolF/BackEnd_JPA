@@ -13,35 +13,35 @@ import jakarta.persistence.Table;
 public class Paciente 	{
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="ID")
+@Column(name="id_paciente")
 Long id;
-@Column(name="rutPaciente")
+@Column(name="rut_paciente")
 Long rutPaciente ;
-@Column(name="nombre")
+@Column(name="nombre_paciente")
 String nombre ;
-@Column(name="apPaterno")
+@Column(name="ap_paterno")
 String apPaterno;
-@Column(name="apMaterno")
+@Column(name="ap_materno")
 String apMaterno;
-@Column(name="fechaNacimiento")
+@Column(name="fecha_nacimiento")
 String fechaNacimiento;
 @Column(name="sexo")
 String sexo;
 @Column(name="direccion")
 String direccion;
-@Column(name="idComuna")
+@Column(name="id_comuna")
 Integer idComuna;
 @Column(name="telefono")
 Integer telefono;
-@Column(name="seguroSalud")
+@Column(name="seguro_salud")
 Integer seguroSalud;
-@Column(name="observación")
-Integer observación;
-@Column(name="idEstado")
+@Column(name="observacion")
+String observacion;
+@Column(name="id_estado")
 Integer idEstado;
-@Column(name="idTutor")
+@Column(name="id_tutor")
 Integer idTutor;
-@Column(name="idGeriatra")
+@Column(name="id_geriatra")
 Integer idGeriatra;
 //GETTERS & SETTERS
 public Long getId() {
@@ -110,11 +110,11 @@ public Integer getSeguroSalud() {
 public void setSeguroSalud(Integer seguroSalud) {
 	this.seguroSalud = seguroSalud;
 }
-public Integer getObservación() {
-	return observación;
+public String getObservacion() {
+	return observacion;
 }
-public void setObservación(Integer observación) {
-	this.observación = observación;
+public void setObservación(String observacion) {
+	this.observacion = observacion;
 }
 public Integer getIdEstado() {
 	return idEstado;
