@@ -46,8 +46,8 @@ public class UsuarioControllerImpl  implements UsuarioController {
 	@Override
 	//@RequestMapping(value = "/customers/{id}", method = RequestMethod.GET, produces = "application/json")
 	//@GetMapping(value = "/usuarios/userpass/{usuario}{pass}", produces = "application/json")
-	@GetMapping(value = "/usuarios/userpass", produces = "application/json")
 	//public Optional<Usuario> getUsuarioByUsuarioAndPass(@PathVariable String usuario,@PathVariable String pass) {
+	@GetMapping(value = "/usuarios/userpass", produces = "application/json")
 	public Optional<Usuario> getUsuarioByUsuarioAndPass(@RequestParam String usuario,@RequestParam String pass) {
 		System.out.println("usuario:" + usuario + ", pass:" + pass + ";");
 		return usuarioService.findUsuarioByUsuarioAndPass(usuario,pass);

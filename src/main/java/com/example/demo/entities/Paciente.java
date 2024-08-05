@@ -43,6 +43,7 @@ Integer idEstado;
 Integer idTutor;
 @Column(name="id_geriatra")
 Integer idGeriatra;
+
 //GETTERS & SETTERS
 public Long getId() {
 	return id;

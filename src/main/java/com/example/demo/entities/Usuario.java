@@ -37,7 +37,15 @@ public class Usuario {
 	String ultimoIngreso;
 	@Column(name="id_estado")
 	Integer idEstado;
+	@Column(name="id_rol")
+	Integer idRol;
 	
+	public Integer getIdRol() {
+		return idRol;
+	}
+	public void setIdRol(Integer idRol) {
+		this.idRol = idRol;
+	}
 	public Long getId() {
 		return id;
 	}
