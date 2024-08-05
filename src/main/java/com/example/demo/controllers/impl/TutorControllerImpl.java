@@ -8,31 +8,31 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.controllers.PacienteController;
-import com.example.demo.entities.Paciente;
-import com.example.demo.services.PacienteService;
+import com.example.demo.controllers.TutorController;
+import com.example.demo.entities.Tutor;
+import com.example.demo.services.TutorService;
 
 @RestController
-public class PacienteControllerImpl  implements PacienteController {
+public class TutorControllerImpl   implements TutorController {
 
 	@Autowired
-	PacienteService pacienteService;
+	TutorService tutorService;
 
 
 	// http://localhost:8888/customers (GET)
-	@GetMapping(value = "/pacientes", produces = "application/json")
+	@GetMapping(value = "/tutores", produces = "application/json")
 	@Override
-	public List<Paciente> getPacientes() {
-		return pacienteService.findAllPacientes();
+	public List<Tutor> getTutores() {
+		return tutorService.findAllTutores();
 	}
 
 
 	// http://localhost:8888/customers/1 (GET)
 	@Override
 	//@RequestMapping(value = "/customers/{id}", method = RequestMethod.GET, produces = "application/json")
-	@GetMapping(value = "/pacientes/{id}", produces = "application/json")
-	public Optional<Paciente> getPacienteById(@PathVariable Long id) {
-		return pacienteService.findPacienteById(id);
+	@GetMapping(value = "/tutores/{id}", produces = "application/json")
+	public Optional<Tutor> getTutorById(@PathVariable Long id) {
+		return tutorService.findTutorById(id);
 	}
 
 }
