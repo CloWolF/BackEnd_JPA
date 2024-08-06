@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.demo.entities.Bitacora;
+import com.example.demo.entities.Customer;
 
 public interface BitacoraService {
 	public List<Bitacora> findAllBitacoras();
