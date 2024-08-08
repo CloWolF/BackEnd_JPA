@@ -29,7 +29,6 @@ public class Geriatra {
 	String especialidad;
 	@Column(name="fecha_nacimiento")
 	String fechaNacimiento;
-
 	@Column(name="telefono")
 	String telefono;
 	@Column(name="sexo")

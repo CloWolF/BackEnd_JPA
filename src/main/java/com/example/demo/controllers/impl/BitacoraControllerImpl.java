@@ -5,8 +5,10 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.controllers.BitacoraController;
@@ -20,7 +22,6 @@ public class BitacoraControllerImpl implements BitacoraController {
 	BitacoraService bitacoraService;
 
 
-	// http://localhost:8888/customers (GET)
 	@GetMapping(value = "/bitacoras", produces = "application/json")
 	@Override
 	public List<Bitacora> getBitacoras() {
@@ -28,33 +29,47 @@ public class BitacoraControllerImpl implements BitacoraController {
 	}
 
 
-	// http://localhost:8888/customers/1 (GET)
 	@Override
-	//@RequestMapping(value = "/customers/{id}", method = RequestMethod.GET, produces = "application/json")
 	@GetMapping(value = "/bitacoras/{id}", produces = "application/json")
 	public Optional<Bitacora> getBitacoraById(@PathVariable Long id) {
 		return bitacoraService.findBitacoraById(id);
 	}
-	
-	// http://localhost:8888/customers (GET)
-	@GetMapping(value = "/bitacoras/paciente/{id}", produces = "application/json")
+
+
 	@Override
+	@GetMapping(value = "/bitacoras/paciente/{id}", produces = "application/json")
 	public List<Bitacora> getBitacoraByIdPaciente(@PathVariable Long id) {
 		return bitacoraService.findBitacoraByIdPaciente(id);
 	}
 	
-	
-	// http://localhost:8888/customers (GET)
-	@GetMapping(value = "/bitacoras/geriatra/{id}", produces = "application/json")
+
 	@Override
+	@GetMapping(value = "/bitacoras/geriatra/{id}", produces = "application/json")
 	public List<Bitacora> getBitacoraByIdGeriatra(@PathVariable Long id) {
 		return bitacoraService.findBitacoraByIdGeriatra(id);
 	}
 	
-	// http://localhost:8888/customers (GET)
-	@GetMapping(value = "/bitacoras/enfermero/{id}", produces = "application/json")
 	@Override
+	@GetMapping(value = "/bitacoras/enfermero/{id}", produces = "application/json")
 	public List<Bitacora> getBitacoraByIdEnfermero(@PathVariable Long id) {
 		return bitacoraService.findBitacoraByIdEnfermero(id);
+	}
+	
+	@Override
+	@PostMapping(value = "/bitacoras/add", produces = "application/json")
+	public Bitacora addBitacorar(@RequestBody Bitacora bitacora) {
+		return bitacoraService.saveBitacora(bitacora);
+	}
+	
+	@Override
+	@GetMapping(value = "/bitacoras/delete/{id}", produces = "application/json")
+	public String deleteBitacora(@PathVariable Long id) {
+		return bitacoraService.deleteBitacora(id);
+	}
+	
+	@Override
+	@PatchMapping(value = "/bitacoras/update", produces = "application/json")
+	public String updateBitacora(@RequestBody Bitacora bitacoraNew) {
+		return bitacoraService.updateBitacora(bitacoraNew);
 	}
 }

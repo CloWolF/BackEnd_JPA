@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.Geriatra;
-import com.example.demo.entities.Paciente;
 import com.example.demo.repository.GeriatraRepository;
 import com.example.demo.services.GeriatraService;
 

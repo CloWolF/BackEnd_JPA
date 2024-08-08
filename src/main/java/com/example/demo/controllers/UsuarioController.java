@@ -10,4 +10,7 @@ public interface UsuarioController  {
 	public Optional<Usuario> getUsuarioById(Long id);
 	public Optional<Usuario> getUsuarioByUsuario(String usuario);
 	public Optional<Usuario> getUsuarioByUsuarioAndPass(String usuario, String pass);
+	public Usuario addUsuario(Usuario usuario);
+	public String deleteUsuario(Long id);
+	public String updateUsuario(Usuario usuarioNew);
 }

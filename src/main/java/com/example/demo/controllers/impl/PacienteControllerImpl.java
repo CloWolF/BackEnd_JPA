@@ -9,16 +9,15 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.controllers.PacienteController;
-import com.example.demo.entities.Customer;
 import com.example.demo.entities.Paciente;
 import com.example.demo.services.PacienteService;
 
-import jakarta.persistence.Column;
+//import jakarta.persistence.Column;
 
 @RestController
 public class PacienteControllerImpl  implements PacienteController {

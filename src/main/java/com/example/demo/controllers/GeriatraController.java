@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.demo.entities.Geriatra;
-import com.example.demo.entities.Paciente;
 
 public interface GeriatraController {
 	public List<Geriatra> getGeriatras();
