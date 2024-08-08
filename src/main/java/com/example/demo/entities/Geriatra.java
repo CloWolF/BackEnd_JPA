@@ -18,7 +18,7 @@ public class Geriatra {
 	Long id;
 
 	@Column(name="rut_geriatra")
-	Long rutPaciente ;
+	Long rutGeriatra ;
 	@Column(name="nombre")
 	String nombre ;
 	@Column(name="ap_paterno")
@@ -27,6 +27,11 @@ public class Geriatra {
 	String apMaterno;
 	@Column(name="especialidad")
 	String especialidad;
+	@Column(name="fecha_nacimiento")
+	String fechaNacimiento;
+
+	@Column(name="telefono")
+	String telefono;
 	@Column(name="sexo")
 	String sexo;
 	@Column(name="direccion")
@@ -42,11 +47,11 @@ public class Geriatra {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getRutPaciente() {
-		return rutPaciente;
+	public Long getRutGeriatra() {
+		return rutGeriatra;
 	}
-	public void setRutPaciente(Long rutPaciente) {
-		this.rutPaciente = rutPaciente;
+	public void setRutGeriatra(Long rutGeriatra) {
+		this.rutGeriatra = rutGeriatra;
 	}
 	public String getNombre() {
 		return nombre;
@@ -95,5 +100,17 @@ public class Geriatra {
 	}
 	public void setIdEstado(Integer idEstado) {
 		this.idEstado = idEstado;
+	}
+	public String getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 }

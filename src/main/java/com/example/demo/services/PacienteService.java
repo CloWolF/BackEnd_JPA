@@ -10,8 +10,8 @@ public interface PacienteService {
 	public Optional<Paciente> findPacienteById(Long id);
 	//public List<Paciente> findPacienteByApPaterno(String apPaterno);
 	//public List<Paciente> findPacienteLikeApPaterno(String apPaterno);
-	//public Customer saveCustomer(Customer customerNew);
-	//public String deleteCustomer(Long id);
-	//public String updateCustomer(Customer customerNew);
+	public Paciente savePaciente(Paciente pacienteNew);
+	public String deletePaciente(Long id);
+	public String updatePaciente(Paciente pacienteNew);
 
 }

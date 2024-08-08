@@ -10,7 +10,4 @@ public interface UsuarioService {
 	public Optional<Usuario> findUsuarioById(Long id);
 	public Optional<Usuario> findUsuarioByUsuario(String usuario);
 	public Optional<Usuario> findUsuarioByUsuarioAndPass(String usuario, String pass);
-	//public Customer saveCustomer(Customer customerNew);
-	//public String deleteCustomer(Long id);
-	//public St
 }
