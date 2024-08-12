@@ -29,6 +29,12 @@ public class GeriatraServiceImpl implements GeriatraService {
 	}
 	
 	@Override
+	public List<Geriatra> findGeriatraByApPaterno(String apPaterno) {
+		return geriatraRepository.findByApPaterno(apPaterno);
+		 
+	}
+	
+	@Override
 	public Geriatra saveGeriatra(Geriatra geriatraNew) {
 		if (geriatraNew != null) {
 			return geriatraRepository.save(geriatraNew);

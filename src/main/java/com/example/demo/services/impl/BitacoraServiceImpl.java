@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.Bitacora;
-import com.example.demo.entities.Tutor;
 import com.example.demo.repository.BitacoraRepository;
 import com.example.demo.services.BitacoraService;
 

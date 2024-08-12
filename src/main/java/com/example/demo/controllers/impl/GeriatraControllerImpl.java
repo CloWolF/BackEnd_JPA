@@ -33,6 +33,10 @@ public class GeriatraControllerImpl implements GeriatraController {
 		return geriatraService.findGeriatraById(id);
 	}
 	
+	@GetMapping(value = "/geriatras/apPaterno/{apPaterno}", produces = "application/json")
+	public List<Geriatra> getGeriatrasByApPaterno(@PathVariable String apPaterno) {
+		return geriatraService.findGeriatraByApPaterno(apPaterno);
+	}
 	
 	@Override
 	@PostMapping(value = "/geriatras/add", produces = "application/json")

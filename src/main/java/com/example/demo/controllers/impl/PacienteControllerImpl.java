@@ -37,6 +37,17 @@ public class PacienteControllerImpl  implements PacienteController {
 		return pacienteService.findPacienteById(id);
 	}
 	
+	@GetMapping(value = "/pacientes/apPaterno/{apPaterno}", produces = "application/json")
+	public List<Paciente> getPacientesByApPaterno(@PathVariable String apPaterno) {
+		return pacienteService.findPacienteByApPaterno(apPaterno);
+	}
+	
+	@GetMapping(value = "/pacientes/nombre/{nombre}", produces = "application/json")
+	@Override
+	public List<Paciente> getPacientesByNombre(@PathVariable String nombre) {
+		return pacienteService.findPacienteByNombre(nombre);
+	}
+	
 	@Override
 	@PostMapping(value = "/pacientes/add", produces = "application/json")
 	public Paciente addPaciente(@RequestBody Paciente paciente) {

@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entities.Customer;
 import com.example.demo.entities.Paciente;
 import com.example.demo.repository.PacienteRepository;
 import com.example.demo.services.PacienteService;
@@ -27,6 +26,18 @@ public class PacienteServiceImpl implements PacienteService {
 	public Optional<Paciente> findPacienteById(Long id) {
 		Optional<Paciente> paciente =pacienteRepository.findById(id);
 		return paciente;
+	}
+	
+	@Override
+	public List<Paciente> findPacienteByApPaterno(String apPaterno) {
+		return pacienteRepository.findByApPaterno(apPaterno);
+		 
+	}
+	
+	@Override
+	public List<Paciente> findPacienteByNombre(String nombre) {
+		return pacienteRepository.findByNombre(nombre);
+		 
 	}
 	
 	@Override
