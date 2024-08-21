@@ -41,6 +41,18 @@ public class PacienteServiceImpl implements PacienteService {
 	}
 	
 	@Override
+	public List<Paciente> findPacienteByIdTutor(Long idTutor) {
+		return pacienteRepository.findByIdTutor(idTutor);
+		 
+	}
+	
+	@Override
+	public List<Paciente> findPacienteByIdGeriatra(Long idGeriatra) {
+		return pacienteRepository.findByIdGeriatra(idGeriatra);
+		 
+	}
+	
+	@Override
 	public Paciente savePaciente(Paciente pacienteNew) {
 		if (pacienteNew != null) {
 			return pacienteRepository.save(pacienteNew);

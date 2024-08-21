@@ -17,7 +17,7 @@ public class Paciente 	{
 Long id;
 @Column(name="rut_paciente")
 Long rutPaciente ;
-@Column(name="nombre_paciente")
+@Column(name="nombre")
 String nombre ;
 @Column(name="ap_paterno")
 String apPaterno;
@@ -34,15 +34,15 @@ Integer idComuna;
 @Column(name="telefono")
 Integer telefono;
 @Column(name="seguro_salud")
-Integer seguroSalud;
+String seguroSalud;
 @Column(name="observacion")
 String observacion;
 @Column(name="id_estado")
 Integer idEstado;
 @Column(name="id_tutor")
-Integer idTutor;
+Long idTutor;
 @Column(name="id_geriatra")
-Integer idGeriatra;
+Long idGeriatra;
 
 //GETTERS & SETTERS
 public Long getId() {
@@ -105,10 +105,10 @@ public Integer getTelefono() {
 public void setTelefono(Integer telefono) {
 	this.telefono = telefono;
 }
-public Integer getSeguroSalud() {
+public String getSeguroSalud() {
 	return seguroSalud;
 }
-public void setSeguroSalud(Integer seguroSalud) {
+public void setSeguroSalud(String seguroSalud) {
 	this.seguroSalud = seguroSalud;
 }
 public String getObservacion() {
@@ -123,16 +123,16 @@ public Integer getIdEstado() {
 public void setIdEstado(Integer idEstado) {
 	this.idEstado = idEstado;
 }
-public Integer getIdTutor() {
+public Long getIdTutor() {
 	return idTutor;
 }
-public void setIdTutor(Integer idTutor) {
+public void setIdTutor(Long idTutor) {
 	this.idTutor = idTutor;
 }
-public Integer getIdGeriatra() {
+public Long getIdGeriatra() {
 	return idGeriatra;
 }
-public void setIdGeriatra(Integer idGeriatra) {
+public void setIdGeriatra(Long idGeriatra) {
 	this.idGeriatra = idGeriatra;
 }
 

@@ -9,15 +9,11 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.controllers.PacienteController;
 import com.example.demo.entities.Paciente;
 import com.example.demo.services.PacienteService;
-
-//import jakarta.persistence.Column;
 
 @RestController
 public class PacienteControllerImpl  implements PacienteController {
@@ -46,6 +42,18 @@ public class PacienteControllerImpl  implements PacienteController {
 	@Override
 	public List<Paciente> getPacientesByNombre(@PathVariable String nombre) {
 		return pacienteService.findPacienteByNombre(nombre);
+	}
+	
+	@GetMapping(value = "/pacientes/tutor/{idTutor}", produces = "application/json")
+	@Override
+	public List<Paciente> getPacientesByIdTutor(@PathVariable Long idTutor) {
+		return pacienteService.findPacienteByIdTutor(idTutor);
+	}
+	
+	@GetMapping(value = "/pacientes/medico/{idGeriatra}", produces = "application/json")
+	@Override
+	public List<Paciente> getPacientesByIdGeriatra(@PathVariable Long idGeriatra) {
+		return pacienteService.findPacienteByIdGeriatra(idGeriatra);
 	}
 	
 	@Override
