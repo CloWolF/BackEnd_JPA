@@ -68,6 +68,7 @@ public class GeriatraServiceImpl implements GeriatraService {
 			geriatraToUpdate.setIdComuna(geriatraUpdated.getIdComuna());
 			geriatraToUpdate.setTelefono(geriatraUpdated.getTelefono());
 			geriatraToUpdate.setIdEstado(geriatraUpdated.getIdEstado());
+			geriatraToUpdate.setIdRol(geriatraUpdated.getIdRol());
 			geriatraRepository.save(geriatraToUpdate);
 			return "Geriatra modificado";
 		}

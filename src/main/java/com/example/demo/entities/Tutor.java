@@ -34,7 +34,10 @@ public class Tutor {
 	Integer telefono;
 	@Column(name="id_estado")
 	Integer idEstado;
+	@Column(name="id_rol")
+	Integer idRol;
 	
+
 	public Long getId() {
 		return id;
 	}
@@ -100,5 +103,11 @@ public class Tutor {
 	}
 	public void setIdEstado(Integer idEstado) {
 		this.idEstado = idEstado;
+	}
+	public Integer getIdRol() {
+		return idRol;
+	}
+	public void setIdRol(Integer idRol) {
+		this.idRol = idRol;
 	}
 }

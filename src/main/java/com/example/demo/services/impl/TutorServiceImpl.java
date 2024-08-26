@@ -62,6 +62,7 @@ public class TutorServiceImpl  implements TutorService {
 			tutorToUpdate.setIdComuna(tutorUpdated.getIdComuna());
 			tutorToUpdate.setTelefono(tutorUpdated.getTelefono());
 			tutorToUpdate.setIdEstado(tutorUpdated.getIdEstado());
+			tutorToUpdate.setIdRol(tutorUpdated.getIdRol());
 			tutorRepository.save(tutorToUpdate);
 			return "Tutor modificado";
 		}
